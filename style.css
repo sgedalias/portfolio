@@ -16,7 +16,6 @@
 }
 
 .hamburguer{
-    /*background-color: red; */
     width: 2rem;
     height: 2rem;
     position: fixed;
@@ -35,14 +34,14 @@
 
 .line{
     width: 100%;
-    height: .2rem;
-    background-color: #ffffff;
-    box-shadow: 0.1rem 0.1rem 2px #555555;
+    height: .25rem;
+    background-color: #a800bf;
+/*    box-shadow: 0.1rem 0.1rem 2px #555555;  */
     transition: transform 1s;
 }
 
 .show-menu #line1{
-    transform: rotate(45deg) translate(.3rem, .39rem);
+    transform: rotate(45deg) translate(.40rem, .40rem);
 }
 
 .show-menu #line2{
@@ -51,7 +50,7 @@
 }
 
 .show-menu #line3{
-    transform: rotate(-45deg) translate(.3rem, -.39rem);
+    transform: rotate(-45deg) translate(.40rem, -.40rem);
 }
 
 .hamburguer span{
@@ -441,7 +440,7 @@ header{
     width: 100%;
     background:
         linear-gradient( rgba(107, 1, 255, 0.3), rgba(149, 0, 255, 0.9)),
-        url(imagens/contato.jpg);
+        url(./imagens/contato.jpg);
     background-size: cover;
 }
 
@@ -514,4 +513,71 @@ header{
     height: 3.5rem;
     font-size: 1.3rem;
     margin-top: 1.3rem;
+}
+
+/* Desenvolvimento do bloco Orçamento */
+.sessao-orcamento{
+    width: 100%;
+    height: 100vh;
+    background: url(./imagens/bg-orcamento.jpg);
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orcamento-wrapper{
+    width: 60%;
+    height: 80%;
+    background-color: #ffffff99;
+    border-radius: 10px;
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, .5);
+    position: relative;
+}
+
+.sessao-orcamento h1{
+    position: absolute;
+    top: -2.5rem;
+    left: 2rem;
+    background: #7f00ff;
+    background: -webkit-linear-gradient(to right, #7f00ff, #e100ff);
+    background: linear-gradient(to right, #7f00ff, #e100ff);
+    padding: 0 3rem;
+    color: #ffffff;
+    font-family: var(--font-primary);
+    font-size: 3rem;
+    font-weight: lighter;
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, .5);
+    border-radius: 10px;
+}
+
+.sessao-orcamento form{
+    margin: 4rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+.sessao-orcamento label{
+    font-family: var(--font-secundary);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.sessao-orcamento input[type="number"]{
+    font-family: var(--font-secundary);
+    width: 4rem;
+    font-size: 2rem;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    padding: 0.3rem;
+}
+
+.btn-orcamento{
+    text-transform: uppercase;
+    padding: 1rem;
+    cursor: pointer;
+    grid-column: 2;
 }
