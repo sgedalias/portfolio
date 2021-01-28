@@ -15,6 +15,10 @@
     --font-action: "Mulish", serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .hamburguer{
     width: 2rem;
     height: 2rem;
@@ -183,6 +187,7 @@ header{
     top: 0;
     right: -20rem;
     transition: all 1s;
+    z-index: 90;   /* Deixa a sidebar acima de todos os elementos*/
 }
 
 .show-menu .sidebar{
@@ -316,18 +321,19 @@ header{
 .conhecimento-img-wrapper{
     grid-column: 7 / 11;
     grid-row: 2 / 6;
-    width:100%;
+    width: 95%;
 }
 
 .conhecimento-img-wrapper img{
     object-fit: cover;
-    width:100%;
+    width: 95%;
 }
 
 /* Desenvolvimento do bloco Projetos */
 .projetos{
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 5rem;
 }
 
 .card{
@@ -361,7 +367,7 @@ header{
     visibility: hidden;
     position: absolute;
     bottom: 0;
-    padding: 2rem;
+    padding: 1.5rem;
     text-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, .4);
     transition: all .4s;
 }
@@ -377,7 +383,7 @@ header{
     font-family: var(--font-action);
     font-size: 1rem;
     font-weight: 700;
-    color: #a802ae;
+    color: #e100ff;
     margin-bottom: 1.5rem;
 }
 
@@ -557,6 +563,7 @@ header{
     grid-template-columns: auto 1fr;
     column-gap: 2rem;
     row-gap: 2rem;
+    padding: 2rem;
 }
 
 .sessao-orcamento label{
@@ -580,4 +587,53 @@ header{
     padding: 1rem;
     cursor: pointer;
     grid-column: 2;
+}
+
+/* Desenvolvimento do Rodapé */
+footer{
+    width: 100%;
+    height: 7rem;
+    background-color: #2a023d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content p{
+    font-family: var(--font-secundary);
+    color: #c5c5c5;
+    font-size: 1.2rem;
+}
+
+.social-list a{
+    margin: 0 2rem;
+    color: #c5c5c5;
+    font-size: 1.3rem;
+}
+
+.social-list ul{
+    display: flex;
+}
+
+#link-topo{
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+    width: 3rem;
+    height: 3rem;
+    background: #7f00ff;
+    background: -webkit-linear-gradient(to right, #7f00ff, #e100ff);
+    background: linear-gradient(to right, #7f00ff, #e100ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    border-radius: .3rem;
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, .5);
 }
