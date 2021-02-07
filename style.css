@@ -234,6 +234,7 @@ header{
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    font-size: 1.5rem;
     transition: background-color 1s;
 }
 
@@ -637,3 +638,20 @@ footer{
     border-radius: .3rem;
     box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, .5);
 }
+
+@media (max-width: 991px) {
+    html,
+    body {
+      overflow-x: hidden;
+    }
+    .mobile-top-fix {
+      margin-top: 30px;
+      margin-bottom: 0px;
+    }
+    .mobile-bottom-fix {
+      margin-bottom: 30px;
+    }
+    .mobile-bottom-fix-big {
+      margin-bottom: 60px;
+    }
+  }
